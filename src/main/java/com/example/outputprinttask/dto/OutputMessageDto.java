@@ -13,7 +13,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class OutputMessageDto implements Comparable{
+public class OutputMessageDto {
 
     private List<String> chars;
     private int vowelsCount;
@@ -41,10 +41,5 @@ public class OutputMessageDto implements Comparable{
         int result = getChars() != null ? getChars().hashCode() : 0;
         result = 31 * result + getVowelsCount();
         return result;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }
